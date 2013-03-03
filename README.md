@@ -1,0 +1,4 @@
+NSubstituteAutoMocker
+=====================
+
+Details will follow.
