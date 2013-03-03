@@ -53,7 +53,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>REM ..\NuGet.exe spec
+    <PostBuildEvent>cd "$(ProjectDir)"
+REM ..\NuGet.exe spec
+
 ..\NuGet.exe pack NSubstituteAutoMocker.csproj -Prop Configuration=Release</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
