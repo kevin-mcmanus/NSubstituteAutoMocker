@@ -1,7 +1,7 @@
 NSubstituteAutoMocker
 =====================
 
-Put very simply NSubstitueAutoMocker is a very lightweight extension to the NSubstitute mocking framework.  Whilst there may be other uses, its primary function is to further simplify unit testing and create a class under test, whose own constructor may contain dependencies that you wish to mock.
+Put very simply NSubstitueAutoMocker is a very lightweight extension to the NSubstitute mocking framework.  Whilst there may be other uses, its primary function is to further simplify unit testing and create a class under test, whose own constructor may contain dependencies that you wish to mock but don't want the hasstle to set up and maintain over time.
 
 Quick start
 -----------
