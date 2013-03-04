@@ -9,7 +9,7 @@ Quick start
 Imagine the following class needed some testing (yes, arguably the tests should come first if your following true TDD):
 
 
-    class SavingsAccount
+    public class SavingsAccount
     {
         private readonly IInterestCalculator _interestCalculator;
 
@@ -36,7 +36,7 @@ Imagine the following class needed some testing (yes, arguably the tests should 
         }
     }
 
-    interface IInterestCalculator
+    public interface IInterestCalculator
     {
         decimal Calculate();
     }
