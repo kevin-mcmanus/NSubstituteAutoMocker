@@ -36,7 +36,7 @@ namespace NSubstituteAutoMocker
             foreach (ParameterInfo info in parameters)
             {
                 Type type = info.ParameterType;
-                var constructorArg = Substitute.For(new Type[] { type }, null);
+                var constructorArg = CreateInstance(type);
                 if (parameterOverrideFunc != null)
                 {
                     constructorArg = parameterOverrideFunc(info, constructorArg);
@@ -46,6 +46,21 @@ namespace NSubstituteAutoMocker
 
             object[] args = _constructors.Values.ToArray();
             ClassUnderTest = Activator.CreateInstance(typeof(T), args) as T;
+        }
+
+        private object CreateInstance(Type type)
+        {
+            if (type.IsPrimitive)
+            {
+                return Activator.CreateInstance(type);
+            }
+
+            if (type == typeof(string))
+            {
+                return null;
+            }
+
+            return Substitute.For(new Type[] { type }, null);
         }
 
         private ConstructorInfo MatchConstructorWithParameters(Type type, Type[] parameterTypes)

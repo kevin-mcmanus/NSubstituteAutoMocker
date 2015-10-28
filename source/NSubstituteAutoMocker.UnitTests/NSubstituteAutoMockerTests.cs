@@ -48,6 +48,15 @@ namespace NSubstituteAutoMocker.UnitTests
                     new NSubstituteAutoMocker<SealedClass>();
                 Assert.IsNotNull(autoMocker.ClassUnderTest);
             }
+
+            [TestMethod]
+            public void PrimativeParameterTypesGetSetToDefaultValue()
+            {
+                NSubstituteAutoMocker<ClassWithPrimativeConstructors> autoMocker =
+                    new NSubstituteAutoMocker<ClassWithPrimativeConstructors>();
+                Assert.AreEqual(0, autoMocker.ClassUnderTest.IntValue);
+                Assert.AreEqual(null, autoMocker.ClassUnderTest.StringValue);
+            }
         }
 
         [TestClass]
