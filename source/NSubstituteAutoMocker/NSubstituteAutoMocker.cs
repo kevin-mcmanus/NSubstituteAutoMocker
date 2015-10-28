@@ -45,7 +45,7 @@ namespace NSubstituteAutoMocker
             }
 
             object[] args = _constructors.Values.ToArray();
-            ClassUnderTest = Substitute.For<T>(args);
+            ClassUnderTest = Activator.CreateInstance(typeof(T), args) as T;
         }
 
         private ConstructorInfo MatchConstructorWithParameters(Type type, Type[] parameterTypes)
