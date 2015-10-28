@@ -40,6 +40,14 @@ namespace NSubstituteAutoMocker.UnitTests
             {
                 Assert.Inconclusive();
             }
+
+            [TestMethod]
+            public void ClassUnderTestCanBeSealed()
+            {
+                NSubstituteAutoMocker<SealedClass> autoMocker =
+                    new NSubstituteAutoMocker<SealedClass>();
+                Assert.IsNotNull(autoMocker.ClassUnderTest);
+            }
         }
 
         [TestClass]
