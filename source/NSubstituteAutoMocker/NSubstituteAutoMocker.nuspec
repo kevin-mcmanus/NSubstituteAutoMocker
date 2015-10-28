@@ -11,7 +11,7 @@
 <!--    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Initial release</releaseNotes>
+    <releaseNotes>Initial release with abilty to mock a sealed object or one containing a non nullable constructor argument</releaseNotes>
     <copyright>Copyright 2013 - 2015</copyright>
     <tags>NSubstitute Automock NSub Automocker</tags>
   </metadata>
