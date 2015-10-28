@@ -12,7 +12,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>Initial release</releaseNotes>
-    <copyright>Copyright 2013</copyright>
+    <copyright>Copyright 2013 - 2015</copyright>
     <tags>NSubstitute Automock NSub Automocker</tags>
   </metadata>
 </package>
