@@ -18,7 +18,7 @@ namespace NSubstituteAutoMocker.UnitTests
                 Assert.IsNotNull(autoMocker.ClassUnderTest);
             }
 
-            /* Don't think it make sense to throw exceptpion in this case
+            /* Don't think it make sense to throw exception in this case
             [TestMethod]
             [ExpectedException(typeof(ConstructorMatchException))]
             public void ThrowsExceptionIfNotAvailable()
@@ -43,6 +43,14 @@ namespace NSubstituteAutoMocker.UnitTests
 
             [TestMethod]
             public void ClassUnderTestCanBeSealed()
+            {
+                NSubstituteAutoMocker<SealedClass> autoMocker =
+                    new NSubstituteAutoMocker<SealedClass>();
+                Assert.IsNotNull(autoMocker.ClassUnderTest);
+            }
+
+            [TestMethod]
+            public void ClassUnderTestCanBeInternal()
             {
                 NSubstituteAutoMocker<SealedClass> autoMocker =
                     new NSubstituteAutoMocker<SealedClass>();
@@ -149,6 +157,14 @@ namespace NSubstituteAutoMocker.UnitTests
                     new NSubstituteAutoMocker<ClassWithDuplicateConstructorTypes>();
                 Assert.IsNotNull(autoMocker.Get<IDependency1>("dependencyTwo"));
             }
+        }
+
+        [TestMethod]
+        public void ItCallsInternalConstructorsThatItHasAccessTo()
+        {
+            var autoMocker = new NSubstituteAutoMocker<ClassWithInternalConstructor>();
+
+            Assert.IsNotNull(autoMocker.Get<IInternalInterface>());
         }
 
         // TODO Do I need to test the use of generics or collections?
