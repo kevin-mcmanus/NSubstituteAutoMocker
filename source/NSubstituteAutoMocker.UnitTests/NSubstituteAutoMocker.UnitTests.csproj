@@ -57,7 +57,10 @@
     <Compile Include="DocumentationSnippets\FirstExample.cs" />
     <Compile Include="NSubstituteAutoMockerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SamplesToTest\ClassWithInternalConstructor.cs" />
     <Compile Include="SamplesToTest\ClassWithPrimativeConstructors.cs" />
+    <Compile Include="SamplesToTest\IInternalInterface.cs" />
+    <Compile Include="SamplesToTest\InternalClass.cs" />
     <Compile Include="SamplesToTest\SealedClass.cs" />
     <Compile Include="SamplesToTest\ClassWithJustDefaultConstructor.cs" />
     <Compile Include="SamplesToTest\ClassWithPrivateDefaultConstructor.cs" />

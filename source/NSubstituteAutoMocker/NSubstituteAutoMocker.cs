@@ -45,7 +45,8 @@ namespace NSubstituteAutoMocker
             }
 
             object[] args = _constructors.Values.ToArray();
-            ClassUnderTest = Activator.CreateInstance(typeof(T), args) as T;
+            var bindingFlags = BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic;
+            ClassUnderTest = Activator.CreateInstance(typeof(T), bindingFlags, null, args, null) as T;
         }
 
         private object CreateInstance(Type type)
@@ -91,8 +92,9 @@ namespace NSubstituteAutoMocker
 
         private static ConstructorInfo GetHighestParameterCountConstructor(Type type)
         {
-            ConstructorInfo result = type.GetConstructors()[0];
-            foreach (ConstructorInfo constructorInfo in type.GetConstructors())
+            var bindingFlags = BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic;
+            ConstructorInfo result = type.GetConstructors(bindingFlags)[0];
+            foreach (ConstructorInfo constructorInfo in type.GetConstructors(bindingFlags))
             {
                 if (constructorInfo.GetParameters().Length > result.GetParameters().Length)
                 {
