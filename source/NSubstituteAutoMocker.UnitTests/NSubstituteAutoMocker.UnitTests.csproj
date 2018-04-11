@@ -83,9 +83,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NSubstituteAutoMocker\NSubstituteAutoMocker.csproj">
-      <Project>{F078C19E-0674-4876-B83A-9F4835B35C1A}</Project>
-      <Name>NSubstituteAutoMocker</Name>
+    <ProjectReference Include="..\NSubstituteAutoMocker.Standard\NSubstituteAutoMocker.Standard.csproj">
+      <Project>{aabd035b-a7cf-4363-a36f-555a6bad74ee}</Project>
+      <Name>NSubstituteAutoMocker.Standard</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

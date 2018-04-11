@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSubstituteAutoMocker", "NS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSubstituteAutoMocker.UnitTests", "NSubstituteAutoMocker.UnitTests\NSubstituteAutoMocker.UnitTests.csproj", "{62746DEA-C533-48D0-A869-ADFF532232F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSubstituteAutoMocker.Standard", "NSubstituteAutoMocker.Standard\NSubstituteAutoMocker.Standard.csproj", "{AABD035B-A7CF-4363-A36F-555A6BAD74EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{62746DEA-C533-48D0-A869-ADFF532232F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62746DEA-C533-48D0-A869-ADFF532232F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62746DEA-C533-48D0-A869-ADFF532232F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AABD035B-A7CF-4363-A36F-555A6BAD74EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AABD035B-A7CF-4363-A36F-555A6BAD74EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AABD035B-A7CF-4363-A36F-555A6BAD74EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AABD035B-A7CF-4363-A36F-555A6BAD74EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Gokulnath</Authors>
+    <Company></Company>
+    <Description>AutoMocker for use with NSubstitute</Description>
+    <PackageLicenseUrl>https://github.com/gokulm/NSubstituteAutoMocker/blob/master/LICENCE.md</PackageLicenseUrl>
+    <Copyright>Copyright 2018</Copyright>
+    <PackageProjectUrl>https://github.com/gokulm/NSubstituteAutoMocker</PackageProjectUrl>
+    <RepositoryUrl />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="nsubstitute" Version="3.1.0" />
+  </ItemGroup>
+
+</Project>
